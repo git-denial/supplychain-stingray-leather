@@ -1,0 +1,749 @@
+{
+  "11155111": [
+    {
+      "name": "sepolia",
+      "chainId": "11155111",
+      "contracts": {
+        "SupplyChain": {
+          "address": "0x9F36d79918020eD21f6E1b12aFC8929c0687Ef73",
+          "abi": [
+            {
+              "inputs": [],
+              "stateMutability": "nonpayable",
+              "type": "constructor"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "email",
+                  "type": "string"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "enum Types.UserRole",
+                  "name": "role",
+                  "type": "uint8"
+                }
+              ],
+              "name": "DeletedUser",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                }
+              ],
+              "name": "NewProduct",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "email",
+                  "type": "string"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "enum Types.UserRole",
+                  "name": "role",
+                  "type": "uint8"
+                }
+              ],
+              "name": "NewUser",
+              "type": "event"
+            },
+            {
+              "anonymous": false,
+              "inputs": [
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "product_id",
+                  "type": "string"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "buyerName",
+                  "type": "string"
+                },
+                {
+                  "indexed": false,
+                  "internalType": "string",
+                  "name": "buyerEmail",
+                  "type": "string"
+                }
+              ],
+              "name": "ProductOwnershipTransfer",
+              "type": "event"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "string",
+                  "name": "id",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                }
+              ],
+              "name": "addProduct",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "string",
+                  "name": "name",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "email",
+                  "type": "string"
+                },
+                {
+                  "internalType": "enum Types.UserRole",
+                  "name": "role",
+                  "type": "uint8"
+                }
+              ],
+              "name": "addUser",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "string",
+                  "name": "product_id",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "image_url",
+                  "type": "string"
+                },
+                {
+                  "internalType": "string",
+                  "name": "extra_data",
+                  "type": "string"
+                }
+              ],
+              "name": "addUserHistory",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "string",
+                  "name": "product_id",
+                  "type": "string"
+                }
+              ],
+              "name": "approveProductHistory",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "getAllProducts",
+              "outputs": [
+                {
+                  "components": [
+                    {
+                      "internalType": "string",
+                      "name": "id",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "string",
+                      "name": "name",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "created_at",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "current_owner",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "previous_owner",
+                      "type": "address"
+                    }
+                  ],
+                  "internalType": "struct Types.Product[]",
+                  "name": "",
+                  "type": "tuple[]"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "getMyDetails",
+              "outputs": [
+                {
+                  "components": [
+                    {
+                      "internalType": "address",
+                      "name": "id",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "string",
+                      "name": "name",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "string",
+                      "name": "email",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "enum Types.UserRole",
+                      "name": "role",
+                      "type": "uint8"
+                    }
+                  ],
+                  "internalType": "struct Types.User",
+                  "name": "",
+                  "type": "tuple"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [],
+              "name": "getMyProducts",
+              "outputs": [
+                {
+                  "components": [
+                    {
+                      "internalType": "string",
+                      "name": "id",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "string",
+                      "name": "name",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "created_at",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "current_owner",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "previous_owner",
+                      "type": "address"
+                    }
+                  ],
+                  "internalType": "struct Types.Product[]",
+                  "name": "",
+                  "type": "tuple[]"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "string",
+                  "name": "id",
+                  "type": "string"
+                }
+              ],
+              "name": "getProductById",
+              "outputs": [
+                {
+                  "components": [
+                    {
+                      "internalType": "string",
+                      "name": "id",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "string",
+                      "name": "name",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "uint256",
+                      "name": "created_at",
+                      "type": "uint256"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "current_owner",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "previous_owner",
+                      "type": "address"
+                    }
+                  ],
+                  "internalType": "struct Types.Product",
+                  "name": "",
+                  "type": "tuple"
+                },
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory",
+                      "name": "supplier",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory",
+                      "name": "crafter",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory",
+                      "name": "distributor",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory",
+                      "name": "retailer",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory[]",
+                      "name": "customers",
+                      "type": "tuple[]"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "approved_by_supplier",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "approved_by_crafter",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "approved_by_distributor",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "approved_by_retailer",
+                      "type": "bool"
+                    }
+                  ],
+                  "internalType": "struct Types.ProductHistory",
+                  "name": "",
+                  "type": "tuple"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "string",
+                  "name": "id",
+                  "type": "string"
+                }
+              ],
+              "name": "getProductHistoryByProductId",
+              "outputs": [
+                {
+                  "components": [
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory",
+                      "name": "supplier",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory",
+                      "name": "crafter",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory",
+                      "name": "distributor",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory",
+                      "name": "retailer",
+                      "type": "tuple"
+                    },
+                    {
+                      "components": [
+                        {
+                          "internalType": "address",
+                          "name": "user_id",
+                          "type": "address"
+                        },
+                        {
+                          "internalType": "uint256",
+                          "name": "date",
+                          "type": "uint256"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "image_url",
+                          "type": "string"
+                        },
+                        {
+                          "internalType": "string",
+                          "name": "extra_data",
+                          "type": "string"
+                        }
+                      ],
+                      "internalType": "struct Types.UserHistory[]",
+                      "name": "customers",
+                      "type": "tuple[]"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "approved_by_supplier",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "approved_by_crafter",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "approved_by_distributor",
+                      "type": "bool"
+                    },
+                    {
+                      "internalType": "bool",
+                      "name": "approved_by_retailer",
+                      "type": "bool"
+                    }
+                  ],
+                  "internalType": "struct Types.ProductHistory",
+                  "name": "",
+                  "type": "tuple"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "id_",
+                  "type": "address"
+                }
+              ],
+              "name": "getUser",
+              "outputs": [
+                {
+                  "components": [
+                    {
+                      "internalType": "address",
+                      "name": "id",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "string",
+                      "name": "name",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "string",
+                      "name": "email",
+                      "type": "string"
+                    },
+                    {
+                      "internalType": "enum Types.UserRole",
+                      "name": "role",
+                      "type": "uint8"
+                    }
+                  ],
+                  "internalType": "struct Types.User",
+                  "name": "",
+                  "type": "tuple"
+                }
+              ],
+              "stateMutability": "view",
+              "type": "function"
+            },
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "buyer_id",
+                  "type": "address"
+                },
+                {
+                  "internalType": "string",
+                  "name": "product_id",
+                  "type": "string"
+                }
+              ],
+              "name": "transferProduct",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
