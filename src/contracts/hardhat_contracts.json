@@ -5,13 +5,8 @@
       "chainId": "11155111",
       "contracts": {
         "SupplyChain": {
-          "address": "0x9F36d79918020eD21f6E1b12aFC8929c0687Ef73",
+          "address": "0x58f246d3B43E10B32F1442Ca7fF6d8a23Ad3309C",
           "abi": [
-            {
-              "inputs": [],
-              "stateMutability": "nonpayable",
-              "type": "constructor"
-            },
             {
               "anonymous": false,
               "inputs": [
