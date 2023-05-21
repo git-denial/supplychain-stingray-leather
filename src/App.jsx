@@ -435,9 +435,7 @@ function App() {
     }
   };
 
-  const getAllProducts = async () => {
-
-    alert("wait")
+  const getAllProducts = async () => {    
 
     const result = await readContracts.SupplyChain.getAllProducts();
     let resultProcessed = (result.map(r => productModel(r)))
